@@ -1,0 +1,13 @@
+
+i
+read -p "enter a number " num
+count=0
+real=$num
+temp=$num
+while [ $temp -ne 0 ]
+do
+digit=$((num/10))
+count=$((count+1))
+done
+echo "number of digits : $count"
+

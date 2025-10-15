@@ -1,0 +1,33 @@
+
+read -p "enter  numeber" num
+count=0
+kk=$num
+while [ $kk -ne 0 ]
+do
+kk=$((kk / 10))
+count=$((count+1))
+done
+echo "number of digits $count"
+
+reversed=0
+real=$num
+while [ $num -gt 0 ]
+do
+digit=$((num % 10))
+reversed=$((reversed*10+digit))
+num=$((num/10))
+done
+if [ $real -eq $reversed ]
+then
+echo "$real is palindrome"
+else
+echo "$real is not a palindrome"
+fi
+
+if [ $((real % 2)) -eq 0 ]
+then
+echo "$real is even"
+else
+echo "$real is odd"
+fi
+
